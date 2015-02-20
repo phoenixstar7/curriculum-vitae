@@ -36,8 +36,10 @@
 
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
 
-\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% \usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
 % To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{fullpage}
 
 \usepackage{hyperref} % Required for adding links	and customizing them
 \definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
@@ -46,6 +48,10 @@
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
 \titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+\usepackage{longtable}
+
+\usepackage{enumitem}
 
 \begin{document}
 
@@ -62,11 +68,12 @@
 \section{Personal Data}
 
 \begin{tabular}{rl}
-\textsc{Full Name:} & Chi-Chun Tiao, \emph{alias} Louis Tiao\\
+\textsc{Full Name:} & Chi-Chun (Louis) Tiao\\
 % \textsc{Date of Birth:} & 11 December 1993 \\
 \textsc{Address:} & 11/86 Houston Rd. Kingsford 2032 NSW Australia \\
 \textsc{Phone:} & 0410-705-912 \\
-\textsc{email:} & \href{mailto:louis.tiao@student.unsw.edu.au}{louis.tiao@student.unsw.edu.au}
+\textsc{email:} & \href{mailto:louis.tiao@student.unsw.edu.au}
+  {louis.tiao@student.unsw.edu.au}
 \end{tabular}
 
 %----------------------------------------------------------------------------------------
@@ -75,20 +82,46 @@
 
 \section{Education}
 
-\begin{tabular}{lr}
+\begin{tabular}{r|p{12.5cm}}
+  \textsc{Jul} 2014 - \textsc{Jul} 2015 & \textbf{University of New South Wales 
+    (UNSW)} \hfill Sydney, Australia\\
+  \emph{(Current)}                      & Bachelor of Science 
+    (\textsc{Honours}) in \textsc{Computer Science} \\ 
+  & \small \textsc{Thesis Title}: ``The Chromatic Derivatives 
+    and its Applications'' \\
+  & \small \textsc{Supervisor}: \href{http://www.cse.unsw.edu.au/~ignjat/}
+    {Dr. Aleksandar Ignjatovic} \\
+  & \begin{minipage}[t]{\linewidth} 
+      {\small
+        \begin{itemize}[noitemsep]
+          \addtolength{\itemindent}{-3.5mm}
+          \item Achieved \textbf{High Distinction} (WAM 88.3/100) grade 
+            (\href{https://student.unsw.edu.au/grades-comparison-of-grading-systems}
+            {94\textsuperscript{th} percentile})
+        \end{itemize}
+      }
+    \end{minipage} \\
+  
+  \multicolumn{2}{c}{}\\
 
-Bachelor of Science in \textsc{Computer Science}	& \emph{Current}\\
-\textbf{The University of New South Wales}, Sydney				&  \textsc{Jul} 2011 - \textsc{Jul} 2015\\ 
- \small\emph{First Class Honours} | \textsc{Specialisation}: Mathematics & \\
- \multicolumn{2}{p{14cm}}{
- \small
- \begin{itemize}
- \item Achieved \textbf{High Distinction} grade (WAM 86/100) across all subjects
- \item Awarded Faculty of Engineering \textbf{Dean's Honours List} in 2013
- \item Awarded Faculty of Engineering \textbf{Dean's Honours List} in 2014
- \item Awarded the \textbf{CSE 3rd Year Undergraduate Performance Award} in 2013
- \end{itemize}
-}
+  \textsc{Jul} 2011 - \textsc{Jul} 2014 & \textbf{University of New South Wales 
+    (UNSW)} \hfill Sydney, Australia \\
+  & Bachelor of Science in \textsc{Computer Science} \\ 
+  & \small \textsc{Specialisations}: Artificial Intelligence, Mathematics \\
+  & \begin{minipage}[t]{\linewidth}
+      {\small
+        \begin{itemize}[noitemsep]
+          \addtolength{\itemindent}{-3.5mm}
+          \item Achieved \textbf{High Distinction} (WAM 86/100) grade 
+            (\href{https://student.unsw.edu.au/grades-comparison-of-grading-systems}
+            {91\textsuperscript{st} percentile})
+          \item Awarded Faculty of Engineering \textbf{Dean's Honours List} in 2013
+          \item Awarded Faculty of Engineering \textbf{Dean's Honours List} in 2014
+          \item Awarded the \textbf{CSE 3\textsuperscript{rd} Year Undergraduate 
+            Performance Award} in 2013
+        \end{itemize}
+      } 
+    \end{minipage} \\
 \end{tabular}
 
 %----------------------------------------------------------------------------------------
@@ -97,40 +130,58 @@ Bachelor of Science in \textsc{Computer Science}	& \emph{Current}\\
 
 \section{Work Experience}
 
-\begin{tabular}{r|p{12.2cm}}
-
-\textsc{Feb 2014}	 & Summer Vacation Scholar at CSIRO. Sydney, Australia \\
-\textsc{Nov 2013} & \emph{Research} \hfill \textsc{Internship} \\
-& \normalsize{ Project: Social Media Text Analysis for Public-Good Applications}\\
-& \footnotesize{
-Applying techniques from machine learning, natural language processing and information retrieval to develop methods for performing large-scale sentiment classification of social media text (Twitter).
-\begin{itemize}
-\item In terms of software engineering, this consisted of building an experimental framework for performing large-scale text classification and a corresponding web service (API) to lightly wrap around classifiers trained using the framework. 
-\item From a machine learning/natural language processing research standpoint, this consisted of data collection, preprocessing, experimentation with various classifiers and their parameters, in addition to constructing and evaluating the discriminative capabilities of various features to thereby gain insights into underlying linguistic phenomena.
-\end{itemize}
-The methods developed in this project achieved results comparable to that of the current state-of-the-art and will be integrated and deployed with CSIRO's social media text analysis prototype.
-}\\
+\begin{longtable}{r|p{13.8cm}}
+  \textsc{Feb 2014}	& \textbf{CSIRO {\small (Commonwealth Scientific and Industrial 
+    Research Organisation)}} 
+    \hfill Sydney, Australia \\
+  \textsc{Nov 2013} & Summer Vacation Scholar / Research Assistant 
+    \hfill (\emph{Internship}) \\
+  & {\small \textsc{Project topic}: ``Social Media Text Analysis for 
+      Public-Good Applications''}\\
+  & {\footnotesize
+      Applying techniques from machine learning, natural language processing 
+      and information retrieval to develop methods for performing large-scale 
+      sentiment classification of social media (Twitter) text.
+      \begin{itemize}
+        \item In terms of software engineering, this consisted of building an 
+        experimental framework for performing large-scale text classification 
+        and a corresponding web service (API) to lightly wrap around classifiers 
+        trained under the framework.
+        \item From a machine learning and natural language processing research 
+        standpoint, this included data collection and preprocessing, experimenting 
+        with various classifiers and their parameters, in addition to constructing 
+        and evaluating the discriminative capabilities of various features to thereby 
+        gain insights into underlying linguistic phenomena.
+      \end{itemize}
+      The methods developed in this project achieved results comparable to that of 
+      the current state-of-the-art and will be integrated and deployed with CSIRO's 
+      social media text analysis prototype.
+    }\\
 				
-\multicolumn{2}{c}{}\\
+  \multicolumn{2}{c}{}\\
 
-\textsc{July 2013} & Software Developer/Consultant at \textsc{Kointex International Ltd}. Taipei, Taiwan.\\
-\textsc{Nov 2012} & \emph{Information Services Consulting} \hfill \textsc{Casual/Part-time}\\
-& \footnotesize{
-Projects undertaken for clients include:
-\begin{itemize}
-\item Developed software for automating, managing and monitoring backups of configuration files, logs, data and charging data records (CDR) of devices in a mid-sized telecommunications network infrastructure (routers, firewalls, access points, mobility controllers and various hosts on the network.) The backup management web application included features such as 
-\begin{itemize}
-\item managing frequency of backup task execution
-\item configuring storage location, format, lifespan of backup file
-\item automated indexing and deletion of expired backup files
-\item detection and report of irregularities such as abnormal difference in backup file size 
-\end{itemize}
-\item Developed code for spreadsheet/report generation by extracting information from and cross-referencing client database tables, access/accounting logs and CDR.
-\end{itemize}}
-
-%------------------------------------------------
-
-\end{tabular}
+  \textsc{July 2013} & \textbf{Kointex International Ltd}.  \hfill Taipei, Taiwan\\
+  \textsc{Nov 2012}  & Software Developer / Consultant      \hfill (\emph{Casual/Part-time})\\
+  & \footnotesize{
+      Projects undertaken for clients include:
+      \begin{itemize}
+        \item Developing software for automating, managing and monitoring backups of 
+          configuration files, logs, data and charging data records (CDR) for a variety of 
+          devices in a mid-sized telecommunications network infrastructure (routers, firewalls, 
+          access points, mobility controllers and various network hosts.)
+          The backup management web application included features such as 
+          \begin{itemize}
+            \item managing frequency of backup task execution
+            \item configuring storage location, format, lifespan of backup file
+            \item automated indexing and deletion of expired backup files
+            \item detection and report of irregularities such as abnormal difference 
+              in backup file size 
+          \end{itemize}
+        \item Developed code for spreadsheet/report generation by extracting information 
+          from and cross-referencing client database tables, access/accounting logs and CDR.
+      \end{itemize}
+    }
+\end{longtable}
 
 %----------------------------------------------------------------------------------------
 %	SCHOLARSHIPS AND ADDITIONAL INFO
@@ -158,7 +209,7 @@ Projects undertaken for clients include:
 
 \begin{tabular}{rl}
 \textsc{English:} & Native / bilingual proficiency\\
-\textsc{Mandarin Chinese:} & Native / bilingual proficiency\\
+\textsc{Chinese (Mandarin):} & Native / bilingual proficiency\\
 \end{tabular}
 
 %----------------------------------------------------------------------------------------
