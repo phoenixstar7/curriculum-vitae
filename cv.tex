@@ -36,22 +36,28 @@
 
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
 
-% \usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% \usepackage[big]{layaureo} 
 % To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
 
 \usepackage{fullpage}
 
-\usepackage{hyperref} % Required for adding links	and customizing them
+% Required for adding links and customizing them
+\usepackage{hyperref} 
 \definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+% Set link colors throughout the document
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} 
 
-\usepackage{titlesec} % Used to customize the \section command
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
-\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+% Used to customize the \section command
+\usepackage{titlesec} 
+% Text formatting of sections
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] 
+% Spacing around sections
+\titlespacing{\section}{0pt}{3pt}{3pt} 
 
 \usepackage{longtable}
 
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 
 \begin{document}
 
@@ -65,17 +71,14 @@
 
 \par{\centering{\Huge Louis \textsc{Tiao}}\bigskip\par} % Your name
 
-\section{Contact}
+\section{Personal Details}
 
 \begin{tabular}{rl}
-\textsc{Full Name:} & Chi-Chun Louis Tiao\\
-% \textsc{Date of Birth:} & 11 December 1993 \\
-\textsc{Address:} & Unit 8. 43 Frederick St. Ashfield 2131 NSW Australia \\
-\textsc{Phone:} & 0410-705-912 \\
-\textsc{email:} & \href{mailto:louistiao@me.com}
-  {louistiao@me.com} \\
-\textsc{Website:} & \href{http://louistiao.me}
-  {http://louistiao.me} 
+  \textsc{Full Name:} & Chi-Chun Louis Tiao \\
+  \textsc{Address:}   & Unit 8. 43 Frederick St. Ashfield 2131 NSW Australia \\
+  \textsc{Phone:}     & 0410 705 912 \\
+  \textsc{email:}     & \href{mailto:louistiao@me.com}{louistiao@me.com} \\
+  \textsc{Website:}   & \href{http://louistiao.me}{http://louistiao.me} 
 \end{tabular}
 
 %----------------------------------------------------------------------------------------
@@ -85,26 +88,23 @@
 \section{Education}
 
 \begin{tabular}{r|p{12.5cm}}
-  \textsc{Jul} 2014 - \textsc{Jul} 2015 & \textbf{University of New South Wales 
-    (UNSW)} \hfill Sydney, Australia\\
-  & Bachelor of Science 
-    (\emph{Honours Class 1}) in \textsc{Computer Science} \\ 
-  & \small \textsc{Thesis}: ``Mathematical Models of Reputation Systems'' \\
-  & \small \textsc{Supervisor}: \href{http://www.cse.unsw.edu.au/~ignjat/}
-    {Dr. Aleksandar Ignjatovic} \\
+  \textsc{Jul} 2014 - \textsc{Jul} 2015 & 
+    \textbf{University of New South Wales (UNSW)} \hfill Sydney, Australia \\
+  & Bachelor of Science (\emph{First Class Honours}) in \textsc{Computer Science} \\ 
+  & \small \textsc{Thesis Title}: ``Mathematical Models of Reputation Systems'' \\
   & \begin{minipage}[t]{\linewidth} 
       {\small
         \begin{itemize}[noitemsep]
           \addtolength{\itemindent}{-3.5mm}
-          \item Achieved \textbf{High Distinction} grade
+          \item Achieved \textbf{High Distinction} (WAM 85/100) grade
         \end{itemize}
       }
     \end{minipage} \\
   
-  \multicolumn{2}{c}{}\\
+  \multicolumn{2}{c}{} \\
 
-  \textsc{Jul} 2011 - \textsc{Jul} 2014 & \textbf{University of New South Wales 
-    (UNSW)} \hfill Sydney, Australia \\
+  \textsc{Jul} 2011 - \textsc{Jul} 2014 & \textbf{University of New South Wales (UNSW)}
+    \hfill Sydney, Australia \\
   & Bachelor of Science in \textsc{Computer Science} \\ 
   & \small \textsc{Specialisations}: Artificial Intelligence, Mathematics \\
   & \begin{minipage}[t]{\linewidth}
@@ -112,12 +112,12 @@
         \begin{itemize}[noitemsep]
           \addtolength{\itemindent}{-3.5mm}
           \item Achieved \textbf{High Distinction} (WAM 86/100) grade 
-            (\href{https://student.unsw.edu.au/grades-comparison-of-grading-systems}
-            {91\textsuperscript{st} percentile})
+                (\href{https://student.unsw.edu.au/grades-comparison-of-grading-systems}
+                {91\textsuperscript{st} percentile})
           \item Awarded Faculty of Engineering \textbf{Dean's Honours List} in 2013
           \item Awarded Faculty of Engineering \textbf{Dean's Honours List} in 2014
           \item Awarded the \textbf{CSE 3\textsuperscript{rd} Year Undergraduate 
-            Performance Award} in 2013
+                Performance Award} in 2013
         \end{itemize}
       } 
     \end{minipage} \\
@@ -130,58 +130,73 @@
 \section{Employment}
 
 \begin{longtable}{r|p{13.8cm}}
-  \textsc{Present} & \textbf{Data61 / CSIRO} formerly known as NICTA {\small (National ICT Australia)}
-    \hfill Sydney, Australia \\
-  \textsc{June 2015} & Software Engineer (Machine Learning/Data Science) 
-    \hfill (\emph{Full-time}) \\
-  & {\footnotesize
-      Presently working with machine learning research engineers in the Spatial 
-      Inference Systems Team to develop and deploy large-scale, production-ready
-      systems from research / rapid prototypes.
+  \textsc{Present}   & \textbf{NICTA (National ICT Australia)} (now Data61/CSIRO) 
+                       \hfill Sydney, Australia \\
+  \textsc{June 2015} & Software Engineer - Machine Learning/Data Science
+                       \hfill (\emph{Full-time}) \\
+  & {\scriptsize
+      Working with machine learning researchers and engineers in the Spatial 
+      Inference Systems Team to integrate prototype implementations of machine 
+      learning algorithms into a fully-fledged production-quality system that is
+      maintainable, robust and massively scalable.
+      \begin{itemize}
+        \item Significantly refactoring to improve the quality and 
+              maintainability of the codebase through implementation of 
+              widely-adopted standards, interfaces and abstractions used by 
+              machine learning frameworks running in production, and by 
+              leveraging the capabilities of state-of-the-art numerical 
+              computing frameworks and libraries.
+        \item Investigating and experimenting with new features to improve the 
+              performance and scalability of algorithms through parallelization
+              of optimization procedures.
+        \item Designing and implementing fault-tolerant preprocessing pipelines
+              for transforming raw data into representations suitable for use by 
+              machine learning models.
+        \item Designing and implementing a deployment management system built on
+              modern container technologies and container orchestration systems.
+      \end{itemize}
     } \\
         
-  \multicolumn{2}{c}{}\\
+  \multicolumn{2}{c}{} \\
 
   \textsc{Feb 2014}	& \textbf{CSIRO {\small (Commonwealth Scientific and Industrial 
-    Research Organisation)}} 
-    \hfill Sydney, Australia \\
+                      Research Organisation)}} \hfill Sydney, Australia \\
   \textsc{Nov 2013} & Summer Vacation Scholar / Research Assistant 
-    \hfill (\emph{Internship}) \\
+                      \hfill (\emph{Internship}) \\
   & {\small \textsc{Project}: ``Social Media Text Analysis for 
       Public-Good Applications''}\\
-  & {\footnotesize
+  & {\scriptsize
       Applying techniques from machine learning, natural language processing 
       and information retrieval to develop methods for performing large-scale 
       sentiment analysis of social media (Twitter) text.
       \begin{itemize}
-        \item In terms of software engineering, this consisted of building an 
-        experimental framework for performing large-scale text classification 
-        and a corresponding web service (API) to wrap around classifiers trained 
-        under the framework.
-        \item From a machine learning and natural language processing research 
-        standpoint, this included data collection and preprocessing, experimenting 
-        with various classifiers and their parameters, in addition to constructing 
-        and evaluating the discriminative capabilities of various features in 
-        order to gain insights into underlying linguistic phenomena.
+        \item Built an experimental framework for performing large-scale text 
+              classification and developed a web service (RESTful API) to create and 
+              manage classifiers trained under the framework.
+        \item From a machine learning and natural language processing research standpoint, 
+              this included data collection and preprocessing, experimenting with various
+              classifiers and their parameters, in addition to constructing and evaluating
+              the discriminative capabilities of various features in order to gain 
+              insights into the underlying linguistic phenomena.
       \end{itemize}
-      The methods developed in this project achieved results comparable to that 
-      of the current state-of-the-art and was integrated into CSIRO's social 
-      media text analysis prototype.
-    }\\
+      The methods developed in this project achieved results comparable to that of the 
+      current state-of-the-art and was integrated into CSIRO's social media text analysis
+      prototype.
+    } \\
 				
-  \multicolumn{2}{c}{}\\
+  \multicolumn{2}{c}{} \\
 
   \newpage
   
-  \textsc{July 2013} & \textbf{Kointex International Ltd}.  \hfill Taipei, Taiwan\\
-  \textsc{Nov 2012}  & Software Developer / Consultant      \hfill (\emph{Casual/Part-time})\\
-  & \footnotesize{
+  \textsc{July 2013} & \textbf{Kointex International Ltd}. \hfill Taipei, Taiwan \\
+  \textsc{Nov 2012}  & Software Consultant / Developer     \hfill (\emph{Casual/Part-time}) \\
+  & {\scriptsize
       Projects undertaken for clients include:
       \begin{itemize}
         \item Developing software for automating, managing and monitoring backups of 
           configuration files, logs, data and charging data records (CDR) for a variety of 
-          devices in a mid-sized telecommunications network infrastructure (routers, firewalls, 
-          access points, mobility controllers and various network hosts.)
+          devices in a mid-sized telecommunications network infrastructure (routers, 
+          firewalls, access points, mobility controllers and various network hosts.)
           The backup management web application provided such features as 
           \begin{itemize}
             \item managing frequency of backup task execution
@@ -197,104 +212,95 @@
 \end{longtable}
 
 %----------------------------------------------------------------------------------------
-%	SCHOLARSHIPS AND ADDITIONAL INFO
-%----------------------------------------------------------------------------------------
-
-\section{Certificates}
-
-\begin{tabular}{rl}
-
-%\textsc{April} 2011 	& {\textsc{Toefl}}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}: 108 (93\textsuperscript{rd} percentile)\\
-\textsc{June} 2009 	&\textsc{Microsoft Certified Technology Specialist:} \\ 
-				& \parbox{0.9\textwidth}{
-				\begin{itemize}
-				\item	\emph{SQL Server 2008, Database Development} (Certification Number: D091-3251)
-				\end{itemize}
-				 }
-
-\end{tabular}
-
-%----------------------------------------------------------------------------------------
-%	LANGUAGES
-%----------------------------------------------------------------------------------------
-
-\section{Languages}
-
-\begin{tabular}{rl}
-\textsc{English:} & Native / bilingual proficiency\\
-\textsc{Chinese (Mandarin):} & Native / bilingual proficiency\\
-\end{tabular}
-
-%----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS 
 %----------------------------------------------------------------------------------------
 
 \section{Skills}
 
 \begin{itemize}
-\item \textbf{Programming Languages:}\\
-\begin{tabular}{rl}
-Proficient in: & \textsc{C}, \textsc{Python}, \textsc{Java}, \textsc{Haskell}, \textsc{Prolog}\\
-Familiar with: & \textsc{C++}, \textsc{Perl}, \textsc{Ruby}, \textsc{Javascript}, \textsc{PHP}, \textsc{Agda}
-\end{tabular}
-\item \textbf{Scientific Computing / Data Analysis / Machine Learning:}\\
-\begin{tabular}{rp{10cm}}
-Proficient in: & NumPy/SciPy, \textsc{Matplotlib}, \textsc{Pandas}, \textsc{scikit-learn}, \textsc{JupyterLab (IPython)}, \textsc{Mathematica}, \textsc{Weka} \\
-Familiar with: & \textsc{TensorFlow}, \textsc{Matlab}, \textsc{Maple}, \textsc{R}, \textsc{D3.js}
-\end{tabular}
-\item \textbf{Web Development:}\\
-\begin{tabular}{rl}
-Proficient in: & Django, Flask\\
-Familiar with: & \textsc{html5}, \textsc{css3}, \textsc{Javascript}
-\end{tabular}
-\item \textbf{DevOps:}\\
-\begin{tabular}{rl}
-Proficient in: & Kubernetes, Docker\\
-% Familiar with: & \textsc{html5}, \textsc{css3}, \textsc{Javascript}
-\end{tabular}
-\item \textbf{General:}\\
-\fb \LaTeX, \textsc{git}/\textsc{svn}, \textsc{Vim}, \textsc{Unix/Linux}, \textsc{Mac OS X}
+  \item \textbf{Programming Languages} \\
+        \begin{tabular}{rl}
+          Proficient & \textsc{C}, \textsc{Python}, \textsc{Java}, \textsc{Haskell}, \textsc{Prolog}\\
+          Familiar   & \textsc{C++}, \textsc{Perl}, \textsc{Ruby}, \textsc{Javascript}, \textsc{PHP}, \textsc{Agda}
+        \end{tabular}
+  \item \textbf{Scientific Computing / Data Analysis / Machine Learning} \\
+        \begin{tabular}{rp{11cm}}
+          Proficient & NumPy/SciPy, \textsc{Matplotlib}, \textsc{Pandas}, \textsc{scikit-learn}, \textsc{JupyterLab (IPython)}, \textsc{Mathematica}, \textsc{Weka} \\
+          Familiar   & \textsc{TensorFlow}, \textsc{Matlab}, \textsc{Maple}, \textsc{R}
+        \end{tabular}
+  \item \textbf{Web Development} \\
+        \begin{tabular}{rl}
+          Proficient & \textsc{Django}, \textsc{Flask} \\
+          Familiar   & \textsc{html5}, \textsc{css3}, \textsc{Javascript}, \textsc{D3.js}
+        \end{tabular}
+  \item \textbf{DevOps} \\
+        \begin{tabular}{rl}
+          Proficient & \textsc{Kubernetes}, \textsc{Docker} \\
+          % Familiar with: & \textsc{html5}, \textsc{css3}, \textsc{Javascript}
+        \end{tabular}
+  \item \textbf{General} \\
+        \fb \LaTeX, \textsc{git}/\textsc{svn}, \textsc{Vim}, \textsc{Unix/Linux}, \textsc{Mac OS X}
 \end{itemize}
 
+%----------------------------------------------------------------------------------------
+% SCHOLARSHIPS AND ADDITIONAL INFO
+%----------------------------------------------------------------------------------------
 
+\section{Certificates}
 
-% %----------------------------------------------------------------------------------------
-% %	INTERESTS AND ACTIVITIES
-% %----------------------------------------------------------------------------------------
+\begin{tabular}{rl}
 
-% \section{Interests}
+  \textsc{June} 2009 & \textsc{Microsoft Certified Technology Specialist:} \\ 
+                     & \parbox{0.9\textwidth}{
+                         \begin{itemize}
+                           \item \emph{SQL Server 2008, Database Development} 
+                                 (Certification Number: D091-3251)
+                         \end{itemize}
+                       }
 
-% %\item Computer Science\\
-% %	Algorithms, Machine Learning, Artificial Intelligence
-% %\item Mathematics\\
-% %	Linear Algebra, Discrete Mathematics
+\end{tabular}
 
-% \begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+%----------------------------------------------------------------------------------------
+% LANGUAGES
+%----------------------------------------------------------------------------------------
 
-% \begin{itemize}
-% \item Basketball
-% \item Fitness
-% \item Martial Arts
-% \end{itemize} &
+\section{Languages}
 
-% \begin{itemize}
-% \item Table Tennis
-% \item Go (weiqi)
-% \item Reading
-% \end{itemize} \\
+\begin{tabular}{rl}
+\textsc{English}            & Native / bilingual proficiency \\
+\textsc{Chinese (Mandarin)} & Native / bilingual proficiency \\
+\end{tabular}
 
-% \end{tabular}
+%----------------------------------------------------------------------------------------
+%	INTERESTS AND ACTIVITIES
+%----------------------------------------------------------------------------------------
 
-% \section{Activities}
+\section{Interests and Activities}
 
-% \begin{itemize}
-% \item UNSW Computer Science and Engineering Society
-% \item UNSW Mathematics Society
-% \item UNSW Go Club
-% \item ACM International Collegiate Programming Contest
-% \item Kaggle Predictive Modelling Competitions
-% \end{itemize}
+\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
 
-% %----------------------------------------------------------------------------------------
+  \begin{itemize}
+    \item Brazilian Jiu-Jitsu
+    \item Weightlifting
+  \end{itemize} 
+
+&
+
+  \begin{itemize}
+    \item Basketball
+    \item Go (weiqi)
+  \end{itemize}
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+% REFERENCES
+%----------------------------------------------------------------------------------------
+
+\section{References}
+
+Professional and academic references available on request.
+
+%----------------------------------------------------------------------------------------
 
 \end{document}
